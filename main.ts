@@ -20,7 +20,11 @@ let level = [
 ];
 
 //This is initializator (main function)
-setInterval(async () => {
-  level.map((block) => console.log(block));
-  setTimeout(() => console.clear(), 10);
-}, 10);
+const init: any = (level: string[][]) => {
+  setInterval(async () => {
+    level.map((block) => console.log(block));
+    setTimeout(() => console.clear(), 10);
+  }, 10);
+};
+
+init(level);
