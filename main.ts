@@ -1,10 +1,26 @@
+//This is level array
+let level = [
+  ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["x                                x"],
+  ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"],
+];
+
+//This is initializator (main function)
 setInterval(async () => {
-  console.log("xxxxxxxxxxxx");
-  console.log("x          x");
-  console.log("x          x");
-  console.log("x          x");
-  console.log("x          x");
-  console.log("x          x");
-  console.log("xxxxxxxxxxxx");
+  level.map((block) => console.log(block));
   setTimeout(() => console.clear(), 10);
 }, 10);
