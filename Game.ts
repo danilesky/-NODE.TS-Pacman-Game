@@ -1,7 +1,11 @@
+import { Player } from "./Player";
+
 export class Game {
   private round: String[] = [];
   constructor() {}
-  play() {
+  play(player: Player) {
+    //skin of player
+    player.getSkin();
     //Starting Coordinates
     let y: number = 1;
     let x: number = 1;
@@ -30,7 +34,7 @@ export class Game {
   getRound(): String[] {
     return this.round;
   }
-  setRound(round: String[]): any {
+  setRound(round: String[]): void {
     this.round = round;
   }
 }
