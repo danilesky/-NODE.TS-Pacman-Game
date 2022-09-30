@@ -5,7 +5,7 @@ export class Game {
   constructor() {}
   play(player: Player) {
     //skin of player
-    player.getSkin();
+    let skin: string = player.getSkin();
     //Starting Coordinates
     let y: number = 1;
     let x: number = 1;
@@ -21,7 +21,7 @@ export class Game {
         y = 1;
       }
       this.round[y] =
-        this.round[y].substring(0, y) + "o" + this.round[y].substring(y + 1);
+        this.round[y].substring(0, y) + skin + this.round[y].substring(y + 1);
       console.log(this.round);
       this.round[y] =
         this.round[y].substring(0, y) + " " + this.round[y].substring(y + 1);
