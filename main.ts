@@ -1,30 +1,36 @@
 //This is level array
 let level = [
-  ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["x                                x"],
-  ["xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"],
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "x                                x",
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 ];
 
 //This is initializator (main function)
-const init: any = (level: string[][]) => {
+const init: any = (level: string[]) => {
+  let i = 1;
   setInterval(async () => {
-    level.map((block) => console.log(block));
-    setTimeout(() => console.clear(), 10);
-  }, 10);
+    level[i] = level[i].substring(0, i) + "o" + level[i].substring(i + 1);
+    console.log(level);
+    level[i] = level[i].substring(0, i) + " " + level[i].substring(i + 1);
+    setTimeout(() => {
+      console.clear();
+      i++;
+    }, 500);
+  }, 500);
 };
 
 init(level);
