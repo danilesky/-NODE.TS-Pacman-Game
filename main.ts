@@ -1,7 +1,7 @@
-import { Character } from "./Character";
-import { Game } from "./Game";
-import { Player } from "./Player";
-import { rounds } from "./rounds";
+import { Character } from "./models/Character";
+import { Game } from "./models/Game";
+import { Player } from "./models/Player";
+import { rounds } from "./rounds/rounds";
 
 //making new game
 let newGame: Game = new Game();
