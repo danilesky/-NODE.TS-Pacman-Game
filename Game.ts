@@ -2,10 +2,12 @@ import { Player } from "./Player";
 
 export class Game {
   private round: String[] = [];
+
   constructor() {}
+
   play(player: Player) {
     //skin of player
-    let skin: string = player.getSkin();
+    let skin: string = player.getCharacters()[0].getSkin();
     //Starting Coordinates
     let y: number = 1;
     let x: number = 1;

@@ -1,17 +1,15 @@
+import { Character } from "./Character";
+
 export class Player {
   name: string;
-  private character: { [key: string]: any } = {
-    skin: "o",
-  };
-
+  protected characters: Character[] = [];
   constructor(name: string) {
     this.name = name;
   }
-
-  setSkin(skin: string): void {
-    this.character.skin = skin;
+  getCharacters() {
+    return this.characters;
   }
-  getSkin(): string {
-    return this.character.skin;
+  setCharacters(character: Character) {
+    this.characters.push(character);
   }
 }
