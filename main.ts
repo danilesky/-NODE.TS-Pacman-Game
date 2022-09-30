@@ -21,7 +21,7 @@ let level = [
 
 //This is initializator (main function)
 const init: any = (level: string[]) => {
-  let i = 1;
+  let i: number = 1;
   setInterval(async () => {
     level[i] = level[i].substring(0, i) + "o" + level[i].substring(i + 1);
     console.log(level);
